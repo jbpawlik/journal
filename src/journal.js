@@ -7,9 +7,10 @@ export function Entry(title, body) {
   this.Body = body;
 }
 
-// let entry1 = new Entry('My first post', 'Hey everybody this is my new blog');
-
-// let vowelNumber = 
+// let entry1 = new Entry('title', 'body')
+// let entry1 = ('title', 'body')
+// entry1.body = text.concat('!')
+// entry1.body = ['paragraph1', 'paragraph2']
 
 Entry.prototype.numberOfWords = function() {
   let wordCount = 0;
@@ -22,18 +23,3 @@ Entry.prototype.numberOfWords = function() {
   });
   return wordCount;
 }; 
-
-Entry.prototype.countVowels = function() {
-  let vowelCount = 0;
-  let vowelMatch = vowel.match(/[AEIOUaeiou]/gi);
-  
-}
-
-
-
-// Entry.prototype.numberOfVowels = function() {
-//   let 
-
-// }
-
-// /[aieou]/gi

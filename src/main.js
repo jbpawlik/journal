@@ -13,11 +13,10 @@ $(document).ready(function() {
     let title = $('#titleinput').val();
     let body = $('#bodyinput').val();
     let entry1 = new Entry(title, body);
-    entry1.numberOfWords();
+    let total = entry1.numberOfWords();
     $('#titleoutput').text(title);
     $('#bodyoutput').text(body);
+    $('#totaloutput').text(total);
 
-
-    
   });
 });
