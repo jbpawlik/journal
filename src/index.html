@@ -4,15 +4,25 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="bundle.js"></script>
   <title>Internet Daily Journal</title>
 </head>
 <body>
   <div class="container">
     <div id="jumbotron">
       <h1>Internet Daily Journal</h1>
-      
+      <div class="form-group">
+        <h3>Create your own blog post by entering a title followed by a body!</h3>
+        <h5>Let's start with your title:</h5>
+        <textarea name="title" id="titleinput"></textarea>
+        <h5>Great! Now let's add the body of your blog:</h5>
+        <textarea name="body" id="bodyinput"></textarea>
+        <button type="submit" class="btn btn-success" id="submitButton">Submit</button>
+        <p><span id="titleoutput"></span></p>
+        <p><span id="bodyoutput"></span></p>
+        <p>This is how many words are in your blog: <span id='totaloutput'></span></p>
+      </div>  
     </div>
   </div>
-  
 </body>
 </html>

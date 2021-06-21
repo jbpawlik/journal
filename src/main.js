@@ -1,41 +1,23 @@
-import '../css/styles.css';
+import './css/styles.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
-
-// Business Logic
-
-// New Entry object 
-
-function Entry(title, body) {
-  this.Title = title
-  this.Body = body
-}
-
-let entry1 = new Entry('My first post', 'Hey everybody this is my new blog')
-
-let vowelNumber = 
-
-Entry.prototype.numberOfWords = function() {
-  let wordCount = 0;
-  let text = this.Body;
-  const wordArray = text.split(" ");
-  wordArray.forEach(function(element) {
-    if (!Number(element)) {
-      wordCount++;
-    }
-  });
-  return wordCount;
-  } 
-
-
-Entry.prototype.numberOfVowels = function() {
-  let 
-
-}
-
-/[aieou]/gi
+import { Entry } from './journal.js';
 
 //User Interface Logic
 
-let text = $("#wordcounter").val();
+$(document).ready(function() {
+  $('#submitButton').click(function(event) {
+    event.preventDefault();
+    
+    let title = $('#titleinput').val();
+    let body = $('#bodyinput').val();
+    let entry1 = new Entry(title, body);
+    entry1.numberOfWords();
+    $('#titleoutput').text(title);
+    $('#bodyoutput').text(body);
+
+
+    
+  });
+});
